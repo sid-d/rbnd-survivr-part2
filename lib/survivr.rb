@@ -23,7 +23,7 @@ def phase_one
 	puts "-" * 11
 	puts "First Phase"
 	puts "-" * 11
-	8.times do |x|
+	8.times do
 		lost_tribe = @borneo.immunity_challenge
 		lost_tribe.tribal_council
 	end
@@ -33,7 +33,7 @@ def phase_two
 	puts "-" * 11
 	puts "Second Phase"
 	puts "-" * 11
-	3.times do |x|
+	3.times do
 		@merge_tribe.tribal_council(immune: @borneo.individual_immunity_challenge)
 	end
 end
@@ -42,7 +42,7 @@ def phase_three
 	puts "-" * 11
 	puts "Third Phase"
 	puts "-" * 11
-	7.times do |x|
+	7.times do
 		@jury.add_member(@merge_tribe.tribal_council(immune: @borneo.individual_immunity_challenge))
 	end
 end
